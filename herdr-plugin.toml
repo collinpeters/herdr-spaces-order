@@ -1,0 +1,27 @@
+id = "collin.spaces-order"
+name = "Spaces Order"
+version = "0.1.0"
+min_herdr_version = "0.9.3"
+description = "Reorder workspaces to match the Spaces worktree hierarchy so workspace numbers and the Agents panel follow it"
+platforms = ["linux", "macos"]
+
+[[startup]]
+command = ["bun", "run", "index.ts"]
+
+[[actions]]
+id = "apply"
+title = "Reorder workspaces to match Spaces"
+contexts = ["workspace"]
+command = ["bun", "run", "index.ts"]
+
+[[events]]
+on = "workspace.created"
+command = ["bun", "run", "index.ts"]
+
+[[events]]
+on = "workspace.moved"
+command = ["bun", "run", "index.ts"]
+
+[[events]]
+on = "workspace.reordered"
+command = ["bun", "run", "index.ts"]
