@@ -64,16 +64,6 @@ The Agents panel must sort by workspace order. That is the default
 agent_panel_sort = "spaces"
 ```
 
-Optionally bind the action to a key:
-
-```toml
-[[keys.command]]
-key = "prefix+o"
-type = "plugin_action"
-command = "collin.spaces-order.apply"
-description = "reorder workspaces to match Spaces"
-```
-
 ## Trade-offs
 
 - Workspace numbers change when a group is pulled together, so number-based
